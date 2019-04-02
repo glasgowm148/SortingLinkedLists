@@ -32,7 +32,7 @@ abstract class SortingAlgorithms {
             byte[] bytes = new byte[(int) file.length()];
 
             try(InputStream fileIn = new FileInputStream( file )) {
-               fileIn.readNBytes( bytes, 0, n ); // unlike just 'read', this does guarantee
+               fileIn.readNBytes( bytes, 0, (int) file.length() ); // unlike just 'read', this does guarantee
             }
 
 

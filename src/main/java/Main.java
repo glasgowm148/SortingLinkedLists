@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -44,7 +45,8 @@ class Main {
         // 10
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort int10.txt:" );
-        int[] result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "int10.txt" );
+        //System.out.println(new File("").getAbsolutePath());
+        int[] result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/int10.txt" );
 
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
@@ -55,7 +57,7 @@ class Main {
         // 50
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort int50.txt:" );
-        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "int50.txt" );
+        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/int50.txt" );
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Cut-off: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickCutOff( result ) + " Nanoseconds" );
@@ -65,7 +67,7 @@ class Main {
         // 100
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort int100.txt:" );
-        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "int100.txt" );
+        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/int100.txt" );
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Cut-off: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickCutOff( result ) + " Nanoseconds" );
@@ -75,18 +77,18 @@ class Main {
         // 1000
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort int1000.txt:" );
-        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "int1000.txt" );
+        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/int1000.txt" );
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Cut-off: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickCutOff( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Median: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickMedian( result ) + " Nanoseconds" );
         System.out.println( "Three-way Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerThreeWay( result ) + " Nanoseconds" );
 
-
+/* Very Slow, only uncomment for rigerous tests.
         // 500k
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort int500k.txt:" );
-        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "int500k.txt" );
+        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/int500k.txt" );
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Cut-off: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickCutOff( result ) + " Nanoseconds" );
@@ -98,13 +100,13 @@ class Main {
         // Dutch
         System.out.println( "---------------------------------" );
         System.out.println( "Time taken to sort Dutch" );
-        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "dutch.txt" );
+        result = SortingAlgorithms.TimeSortingAlgorithms.readFiles( "src/main/resources/dutch.txt" );
         System.out.println( "Insertion Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerInsert( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuick( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Cut-off: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickCutOff( result ) + " Nanoseconds" );
         System.out.println( "Quick Sort Median: " + SortingAlgorithms.TimeSortingAlgorithms.timerQuickMedian( result ) + " Nanoseconds" );
         System.out.println( "Three-way Quick Sort: " + SortingAlgorithms.TimeSortingAlgorithms.timerThreeWay( result ) + " Nanoseconds" );
-
+*/
 
     }
 }
