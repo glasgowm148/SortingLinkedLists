@@ -30,9 +30,12 @@ abstract class SortingAlgorithms {
             File file = new File(filename);
 
             byte[] bytes = new byte[(int) file.length()];
-            FileInputStream fileIn = new FileInputStream(file);
-            fileIn.read(bytes);
-            fileIn.close();
+
+            try(InputStream fileIn = new FileInputStream( file )) {
+               fileIn.readNBytes( bytes, 0, n ); // unlike just 'read', this does guarantee
+            }
+
+
             String[] valueStr = new String(bytes).trim().split("\\s+");
             int[] array = new int[valueStr.length];
             for (int i = 0; i < valueStr.length; i++)
